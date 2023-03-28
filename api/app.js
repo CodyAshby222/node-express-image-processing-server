@@ -3,10 +3,10 @@ const path = require("path");
 
 const pathToIndex = path.resolve(__dirname, "../client/index.html");
 
+const app = express();
+
 app.use("/*", (request, response) => {
   response.sendFile(pathToIndex);
 });
-
-const app = express();
 
 module.exports = app;
